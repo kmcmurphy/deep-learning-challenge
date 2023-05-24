@@ -63,3 +63,5 @@ In the end, I settled on three approaches for training the data.
   - Overall accuracy: 73.13% with a loss of 61.9%
 
 ![download](https://github.com/kmcmurphy/deep-learning-challenge/blob/main/images/optimized_trial_3.png)
+
+Based on these results, I would re-examine the initial name column removed, as there were many duplicates in the values, which if binned correctly, may have provided more features to examine and learn from. I also would have done additional research on the parameters available in Keras tuner that might have optimized its testing and analysis of an optimal model format.
