@@ -21,7 +21,7 @@ The model produce an accuracy of 72% with a loss of 56%
 ## Optimizing the Model
 The first model was far from perfect, so further optimization would be needed. In the end, many methods were attempted before choosing three different sets of parameters to train the data on. Most of the initial optimzation steps were abandoned after producing no discernable improvement in the model.
 
--Optimization steps  attempted
+<b>Optimization steps attempted</b>
   - The first step taken (and kept) was to reduce extra noise in the data. This meant dropping STATUS and SPECIAL_CONSIDERATIONS. Neither of these features were diverse enough in count.
   - Further bin the original columns
     - APPLICATION_TYPE and CLASSIFICATION were adjusted so that each would only have four unique values
@@ -35,4 +35,31 @@ The first model was far from perfect, so further optimization would be needed. I
     - The count of neurons and hidden layers were bounced against the relu, tanh and sigmoid activation methods
     - Epochs were set ranging from 4 to 100
   
-  Overall, the highest accuracy obtained was 74%.
+  Overall, the highest accuracy obtained was <u><b>74%</b></u>.
+
+## Settling on Models
+In the end, I settled on three approaches for training the data.
+
+- The First Model
+  - Activation method: relu
+  - Total layers: 5
+  - Nueron structure: 100/100/75/50/225
+  - Overall accuracy: 72.6% with a loss of 56.65%
+
+![download](https://github.com/kmcmurphy/deep-learning-challenge/blob/main/images/optimized_trial_2.png)
+
+- The Second Model
+  - Activation method: tanh
+  - Total layers: 5
+  - Nueron structure: 100/100/75/50/225
+  - Overall accuracy: 72.7% with a loss of 56.9%
+
+![download](https://github.com/kmcmurphy/deep-learning-challenge/blob/main/images/optimized_trial_1.png)
+
+- The Third Model
+  - Activation method: relu
+  - Total layers: 5
+  - Nueron structure: 100/2000/1000/500/225
+  - Overall accuracy: 73.13% with a loss of 61.9%
+
+![download](https://github.com/kmcmurphy/deep-learning-challenge/blob/main/images/optimized_trial_3.png)
