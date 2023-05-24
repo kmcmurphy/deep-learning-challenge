@@ -1,3 +1,7 @@
+#Ignore my files
+#Starter_Code.ipynb
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
